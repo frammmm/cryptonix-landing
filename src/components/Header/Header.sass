@@ -1,0 +1,89 @@
+@import '../../styles/mixins'
+
+.header__container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 145px
+  z-index: 100
+  transition: all 1s cubic-bezier(.435,.01,.135,1)
+
+  +r(768)
+    height: 100px
+
+.theme-light 
+  .header
+
+    &__logo
+      color: #000
+
+    &__menu
+      .bar
+        background-color: #000
+
+    &__button
+      display: none
+
+.header
+  position: absolute
+  left: 0
+  right: 0
+  z-index: 1
+
+  &__right
+    display: flex
+    align-items: center
+
+  &__logo
+    color: white
+    font-size: 22px
+    font-weight: 300
+    letter-spacing: 0.36px
+    text-decoration: none
+
+  &__menu
+    margin-left: 36px
+    cursor: pointer
+    background: none
+    border: none
+    width: 40px
+    height: 40px
+    outline: none
+
+    &:hover
+      .bar
+        width: 36px
+
+    .bar
+      float: right
+      display: block
+      width: 36px
+      height: 2px
+      background-color: #fff
+      transition: width .3s
+
+      &:not(:last-child)
+        margin-bottom: 5px
+
+      &--top
+        width: 25px
+
+      &--bottom
+        width: 9px
+
+  &__button
+    margin: 0 8px
+    color: #f9fbf8
+    font-size: 12px
+    letter-spacing: 0.1px
+    text-decoration: none
+    border-radius: 3px  
+    padding: 10px 20px
+    transition: all .3s
+
+    +r(768)
+      display: none
+      
+    &:hover
+      color: #141516
+      background-color: #f3f3f3

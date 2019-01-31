@@ -1,0 +1,122 @@
+@import '../../styles/mixins'
+
+.footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  border-top: 1px solid #212121
+  padding-top: 45px
+
+  +r(768)
+    padding-top: 30px
+
+  +r(576)
+    padding-top: 20px
+
+  &__logo
+    svg
+      height: 32px
+      width: 32px
+      fill: white
+
+  .nav
+    padding-top: 45px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    
+    +r(768)
+      padding-top: 30px
+
+    +r(576)
+      padding-top: 20px
+
+    &__item
+      margin: 0 25px 5px
+      
+
+      &.is-active
+        .nav__link
+          color: #7ac231
+
+    &__link
+      transition: all 3s
+      color: #606166
+      font-size: 11px
+      font-weight: 700
+      letter-spacing: 0.4px
+      text-transform: uppercase
+      text-decoration: none
+      transition: color .3s
+
+      &:hover
+        color: #fff
+
+
+  .socials
+    display: flex
+    padding-top: 45px
+    
+    +r(768)
+      padding-top: 30px
+
+    +r(576)
+      padding-top: 20px
+
+    &__item
+      margin: 0 15px
+
+    &__link
+      svg
+        height: 32px
+        width: 32px
+        transition: fill .3s
+        fill: #2a2b31
+
+      &:hover
+        svg
+          fill: white
+
+    &__icon
+      fill: #2A2B31
+      width: 32px
+
+  .subnav
+    display: flex
+    padding-top: 40px
+    padding-bottom: 40px
+
+    +r(768)
+      padding-top: 30px
+      padding-bottom: 30px
+
+    +r(576)
+      padding-top: 20px
+      padding-bottom: 20px
+
+    &__item
+      padding: 0 10px
+
+    &__link
+      color: #d8d8d8
+      font-size: 12px
+      letter-spacing: 0.1pxs
+      text-decoration: none
+      transition: color .3s
+
+      &:hover
+        color: #fff
+
+  .copyright
+    width: 100%
+    padding: 15px 0 
+    text-align: center
+    background-color: #2A2B31
+
+    +r(768)
+      padding: 12px 0
+
+    p
+      color: #535355
+      font-size: 12px
+      letter-spacing: 1px

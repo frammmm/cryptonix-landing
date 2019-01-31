@@ -1,0 +1,187 @@
+@import '../../styles/mixins'
+
+.slider
+  height: 100vh
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  overflow: hidden
+
+  &__pagination
+    position: absolute
+    top: 350px
+
+  &__list
+    +r(768)
+      width: 400%
+      display: flex
+
+    @for $i from 1 through 4
+      &[data-slide="#{$i}"]
+        .slide
+          transform: translateY(percentage(-($i - 1))) translateZ(0)
+
+        +r(768)
+          .slide
+            transform: translateX(percentage(-($i - 1))) translateZ(0)
+
+.slide
+  position: relative
+  height: 100vh
+  width: 100%
+  overflow: hidden
+  transition: transform 1s cubic-bezier(.435,.01,.135,1)
+  
+  &__image
+    position: absolute
+    height: 100vh
+    width: 100%
+    object-fit: cover
+    opacity: .01
+    transform: scale(1.15) translateZ(0)
+    transition: transform 2.5s cubic-bezier(.23,1,.32,1) .2s, opacity 3s
+
+  &__borders
+    position: absolute
+    transition: transform 1s cubic-bezier(.435,.01,.135,1) .1s
+    background-color: #08080A
+    z-index: 1
+
+    +r(768)
+      display: none
+
+    &:nth-child(odd)
+      width: 100%
+      height: 80px
+
+    &:nth-child(even)
+      height: 100%
+      width: 100px
+
+    &:nth-child(1) //top
+      top: -1px
+      transform-origin: 0 0
+
+    &:nth-child(2) //right
+      right: 0
+      transform-origin: 100% 0 
+
+    &:nth-child(3) //bottom
+      bottom: -1px
+      transform-origin: 0 100%
+
+    &:nth-child(4) //left
+      left: 0
+      transform-origin: 0 0
+
+    +rm(769)
+      &:nth-child(odd) //top, bottom
+        transform: scaleY(1) translateZ(0)
+
+      &:nth-child(even) //right, left
+        transform: scaleX(1) translateZ(0)
+
+    +rm(993)
+      &:nth-child(odd) //top, bottom
+        height: 110px
+
+      &:nth-child(even) //right, left
+        width: 130px
+
+  &__inner
+    position: relative
+    height: 100%
+
+  &__text
+    position: absolute
+    bottom: 400px
+    max-width: 65%
+    font-size: 52px
+    font-weight: 300
+    line-height: 68px
+    opacity: 0
+    transition: opacity 1.3s cubic-bezier(.435,.01,.135,1) .65s
+        
+  &__action
+    position: absolute
+    bottom: 200px
+    width: 230px
+    height: 55px
+    border: 2px solid #fff
+    border-radius: 2px
+    background-color: transparent
+    color: #fff
+    font-size: 11px
+    text-transform: uppercase
+    cursor: pointer
+
+    transition: background-color .3s, color .3ss
+
+    &:focus, &:hover
+      color: #000
+      background-color: #fff
+
+  &.is-active
+    .slide
+      &__image
+        opacity: 1
+        transform: scale(1) translateZ(0)
+
+      &__borders
+        +rm(769)
+          &:nth-child(odd)
+            transform: scaleY(0) translateZ(0)
+
+          &:nth-child(even)
+            transform: scaleX(0) translateZ(0)
+
+      &__text, &__action
+        opacity: 1
+        transform: scale(1) translateZ(0)
+
+.pagination
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    height: 32px
+    width: 20px
+    z-index: 1
+    cursor: pointer
+
+    &.is-active
+      &:after
+        background-color: #fff
+
+    &:after
+      position: absolute
+      content: ''
+      width: 3px
+      height: 3px
+      background-color: rgba(#fff, .5)
+      border-radius: 50%
+      transition: background-color 1s cubic-bezier(.43,.01,.13,1) .15s
+
+    @for $i from 1 through 4
+      &:nth-child(#{$i}).is-active ~ .pagination__pointer
+        transform: translate3d(0, percentage($i) - 100%, 0)
+        
+  &__pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 32px
+    width: 20px
+    position: absolute
+    top: 0
+    transition: transform 1s cubic-bezier(.43,.01,.13,1)
+
+    &:after
+      content: ''
+      width: 17px
+      height: 17px
+      border: 2px solid rgba(#888, .15)
+      
+      border-radius: 50%

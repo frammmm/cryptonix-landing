@@ -1,0 +1,44 @@
+@import '~@/styles/mixins'
+
+.container
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin-left: auto
+  margin-right: auto
+
+  +r(768)
+    padding-left: 30px
+    padding-right: 30px 
+
+.row
+  display: flex
+  flex-wrap: wrap
+  margin-left: -15px
+  margin-right: -15px
+
+  &.right
+    text-align: right
+
+.column
+  position: relative
+  width: 100%
+  min-height: 1px
+  padding-left: 15px
+  padding-right: 15px
+
+  &.right
+    text-align: right
+
+@for $i from 1 through 16
+  .column-#{$i}
+    flex: 0 0 percentage($i / 16)
+    max-width: percentage($i / 16)
+
+    +r(768)
+      max-width: 100%
+
+@for $i from 1 through 16
+  +rm(769)
+    .push-#{$i}
+      margin-left: percentage($i / 16)

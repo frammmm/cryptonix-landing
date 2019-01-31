@@ -1,0 +1,38 @@
+@import animations
+@import grid
+@import reset
+@import components
+
+body, button
+  font-family: 'GTEesti'
+
+body
+  color: #ffffff
+  transition: background-color .3s
+
+  &.theme-light
+    background-color: #fff
+
+button
+  cursor: pointer
+
+@font-face
+  font-family: 'GTEesti'
+  font-style: normal
+  font-weight: 300
+  src: local('GT-Eesti-Pro-Display-Light'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Light.woff2') format('woff2'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Light.woff') format('woff')
+@font-face
+  font-family: 'GTEesti'
+  font-style: normal
+  font-weight: 400
+  src: local('GT-Eesti-Pro-Display-Regular'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Regular.woff2') format('woff2'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Regular.woff') format('woff')
+@font-face
+  font-family: 'GTEesti'
+  font-style: normal
+  font-weight: 500
+  src: local('GT-Eesti-Pro-Display-Medium'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Medium.woff2') format('woff2'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Medium.woff') format('woff')
+@font-face
+  font-family: 'GTEesti'
+  font-style: normal
+  font-weight: 700
+  src: local('GT-Eesti-Pro-Display-Bold'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Bold.woff2') format('woff2'), url('~@/assets/fonts/GT-Eesti-Pro-Display-Bold.woff') format('woff')

@@ -1,0 +1,48 @@
+.field
+  margin-bottom: 30px
+  padding-left: 15px
+  padding-right: 15px
+  display: flex
+  flex-basis: 100%
+
+  +r(768)
+    margin-bottom: 15px
+
+    button
+      margin-top: 30px
+
+  &::placeholder
+    text-transform: uppercase
+
+  &--half
+    flex-basis: 50%
+
+    +r(768)
+      flex-basis: 100%
+
+  &--vac
+    align-items: center
+
+  input, textarea
+    width: 100%
+    padding: 7px 30px
+    background-color: #000
+    border: 1px solid #aaa
+    border-radius: 5px
+    outline: 0
+    color: #fff
+    font-size: 10px 
+    line-height: 38px
+    text-transform: uppercase
+
+  textarea
+    resize: vertical
+    min-height: 165px
+
+
+
+  &--light
+    input, textarea
+      color: #000
+      border: 1px solid #000
+      background-color: #fff
