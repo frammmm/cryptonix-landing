@@ -1,0 +1,9 @@
+{
+  "name": "cryptonix-landing",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/2018",
+    "packages/shared"
+  ]
+}

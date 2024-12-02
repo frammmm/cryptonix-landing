@@ -3,13 +3,13 @@
     <p class="quote">We’re growing fast, and we’re looking for extraordinary people to share their experience and expertise.<br>Join Cryptonix, and help us move work forward. </p>
     <section class="positions">
       <h3>Open positions</h3>
- 
+
       <div class="positions__inner">
         <div class="column-5">
           <div class="categories">
-            <button 
-              v-for="category in availableCategories" 
-              :key="category.id" 
+            <button
+              v-for="category in availableCategories"
+              :key="category.id"
               :class="['categories__item', selectedCategory === category.id && 'is-active']"
               @click="handleCategorySelect(category.id)"
             >{{ category.name }}</button>
@@ -23,27 +23,27 @@
                 <button class="dropdown__button">
                   {{ selectedLocationName }}
                   <svg class="icon icon-dropdown">
-                    <use xlink:href="@/assets/img/sprite.svg#dropdown"/>
+                    <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#dropdown"/>
                   </svg>
                 </button>
               </div>
               <div class="dropdown__menu">
                 <div class="dropdown__content">
-                  <div 
-                    v-for="location in availableLocations" 
-                    :key="location.id" 
-                    class="dropdown__item" 
+                  <div
+                    v-for="location in availableLocations"
+                    :key="location.id"
+                    class="dropdown__item"
                     @click.stop="handleDropdownValue(location.id)"
                   >{{ location.location }}</div>
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
           <!-- end positions__right-header -->
           <div class="positions__list">
-            <div 
-              v-for="position in availablePositions" 
-              :key="position.id" 
+            <div
+              v-for="position in availablePositions"
+              :key="position.id"
               class="positions__item"
             >
               <div class="item">
@@ -52,13 +52,13 @@
                 <div class="item__bottom">
                   <div class="item__location">
                     <svg class="icon icon-location">
-                      <use xlink:href="@/assets/img/sprite.svg#location"/>
+                      <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#location"/>
                     </svg>
                     {{ position.location }}
                   </div>
                   <button class="item__apply">Apply now</button>
                 </div>
-                
+
               </div>
             </div>
           </div>
