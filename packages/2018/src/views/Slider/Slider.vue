@@ -1,24 +1,24 @@
 <template>
   <div>
-    <section 
-      ref="slider" 
-      class="slider" 
+    <section
+      ref="slider"
+      class="slider"
       @wheel="handleScroll"
     >
       <div :data-slide="activeSlide + 1" class="slider__list">
-        <div 
-          v-for="slide in slides" 
-          :class="['slide', activeSlide === slide.id && 'is-active', direction === 1 && 'from-top', direction === -1 && 'from-bottom']" 
+        <div
+          v-for="slide in slides"
+          :class="['slide', activeSlide === slide.id && 'is-active', direction === 1 && 'from-top', direction === -1 && 'from-bottom']"
           :key="slide.id"
         >
-          <div 
-            v-for="i in 4" 
-            :key="i" 
+          <div
+            v-for="i in 4"
+            :key="i"
             class="slide__borders"
           />
-          <img 
-            :src="slide.image" 
-            class="slide__image" 
+          <img
+            :src="slide.image"
+            class="slide__image"
             alt=""
           >
           <div class="slide__inner container">
@@ -29,9 +29,9 @@
       </div>
       <div class="slider__pagination">
         <ul class="pagination container">
-          <li 
-            v-for="slide in slides" 
-            :class="['pagination__item', activeSlide === slide.id && 'is-active']" 
+          <li
+            v-for="slide in slides"
+            :class="['pagination__item', activeSlide === slide.id && 'is-active']"
             :key="slide.id"
           />
           <div class="pagination__pointer"/>
@@ -65,26 +65,26 @@ export default {
           id: 0,
           text:
             "Exchange between all popular currencies with a couple of clicks",
-          image: require("@/assets/img/slide1.jpg"),
-          url: "@/assets/img/slide1.jpg"
+          image: require("@cryptonix-landing/shared/assets/img/slide1.jpg"),
+          url: "@cryptonix-landing/shared/assets/img/slide1.jpg"
         },
         {
           id: 1,
           text: "The leading platform for professional cryptocurrency traders",
-          image: require("@/assets/img/slide2.jpg"),
-          url: "@/assets/img/slide2.jpg"
+          image: require("@cryptonix-landing/shared/assets/img/slide2.jpg"),
+          url: "@cryptonix-landing/shared/assets/img/slide2.jpg"
         },
         {
           id: 2,
           text: "Multi-Currency Wallet That Actually Works",
-          image: require("@/assets/img/slide3.jpg"),
-          url: "@/assets/img/slide3.jpg"
+          image: require("@cryptonix-landing/shared/assets/img/slide3.jpg"),
+          url: "@cryptonix-landing/shared/assets/img/slide3.jpg"
         },
         {
           id: 3,
           text: "Unlimited free transfers between Cryptonix account holders",
-          image: require("@/assets/img/slide4.jpg"),
-          url: "@/assets/img/slide4.jpg"
+          image: require("@cryptonix-landing/shared/assets/img/slide4.jpg"),
+          url: "@cryptonix-landing/shared/assets/img/slide4.jpg"
         }
       ]
     };

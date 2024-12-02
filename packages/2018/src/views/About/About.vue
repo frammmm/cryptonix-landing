@@ -1,20 +1,20 @@
 <template>
   <div>
     <section class="video">
-      <video 
+      <video
         ref="video"
         loop
         muted
-        poster="@/assets/img/about.jpg"
+        poster="@cryptonix-landing/shared/assets/img/about.jpg"
         @click="changeVideoState"
         @pause="pauseVideo"
         @play="playVideo"
       >
-        <source src="@/assets/media/about.mp4" type="video/mp4">
+        <source src="@cryptonix-landing/shared/assets/media/about.mp4" type="video/mp4">
       </video>
 
       <transition name="fade">
-        <div 
+        <div
           v-if="!isPlaying"
           class="video-controls"
           @click="changeVideoState"
@@ -36,7 +36,7 @@
 
       <div class="features__list container">
         <div class="features__item">
-          <div class="item__img"><img src="@/assets/img/about1.png" alt="Security"></div>
+          <div class="item__img"><img src="@cryptonix-landing/shared/assets/img/about1.png" alt="Security"></div>
           <div class="item__info">
             <h4 class="item__header">Multiple security</h4>
             <p class="item__description">The private key under control Multiple signature technical support and two-step authorization verification Multiple verification methods to ensure the safety of digital assets</p>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="features__item">
-          <div class="item__img"><img src="@/assets/img/about2.png" alt="All-in-one"></div>
+          <div class="item__img"><img src="@cryptonix-landing/shared/assets/img/about2.png" alt="All-in-one"></div>
           <div class="item__info">
             <h4 class="item__header">All in one</h4>
             <p class="item__description">Support the one-stop management of blockchain assets such as BTC, ETH , ACT and etc Compatibility for decentralization and centralization, assets under control</p>
@@ -52,7 +52,7 @@
           </div>
         </div>
         <div class="features__item">
-          <div class="item__img"><img src="@/assets/img/about3.png" alt="Innocation"></div>
+          <div class="item__img"><img src="@cryptonix-landing/shared/assets/img/about3.png" alt="Innocation"></div>
           <div class="item__info">
             <h4 class="item__header">Technology innovation</h4>
             <p class="item__description">Before starting Greenhouse, I spent a couple months traveling around the country, talking with CEOs about the things that kept them up at night.</p>
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="features__item">
-          <div class="item__img"><img src="@/assets/img/about4.png" alt="Card"></div>
+          <div class="item__img"><img src="@cryptonix-landing/shared/assets/img/about4.png" alt="Card"></div>
           <div class="item__info">
             <h4 class="item__header">Cryptonix Card</h4>
             <p class="item__description">Seamless connection between the digital assets and the bank card, supporting global card consumption Cryptonix network, transfer payment second level confirmation.<br>Consumption with cashback and discount for every expenditure</p>

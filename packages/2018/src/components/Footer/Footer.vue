@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__logo">
       <svg class="icon icon-logo">
-        <use xlink:href="@/assets/img/sprite.svg#logo"/>
+        <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#logo"/>
       </svg>
     </div>
     <ul class="nav">
@@ -30,35 +30,35 @@
       <li class="socials__item">
         <a href="/" class="socials__link">
           <svg class="icon icon-google">
-            <use xlink:href="@/assets/img/sprite.svg#google"/>
+            <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#google"/>
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a href="/" class="socials__link">
           <svg class="icon icon-facebook">
-            <use xlink:href="@/assets/img/sprite.svg#facebook"/>
+            <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#facebook"/>
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a href="/" class="socials__link">
           <svg class="icon icon-behance">
-            <use xlink:href="@/assets/img/sprite.svg#behance"/>
+            <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#behance"/>
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a href="/" class="socials__link">
           <svg class="icon icon-linkedin">
-            <use xlink:href="@/assets/img/sprite.svg#linkedin"/>
+            <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#linkedin"/>
           </svg>
         </a>
       </li>
       <li class="socials__item">
         <a href="/" class="socials__link">
           <svg class="icon icon-twitter">
-            <use xlink:href="@/assets/img/sprite.svg#twitter"/>
+            <use xlink:href="@cryptonix-landing/shared/assets/img/sprite.svg#twitter"/>
           </svg>
         </a>
       </li>
